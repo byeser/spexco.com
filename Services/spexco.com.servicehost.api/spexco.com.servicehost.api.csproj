@@ -4,5 +4,24 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Github\spexco.com\Services\spexco.com.servicehost.api\spexco.com.servicehost.api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup> 
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.19" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.12.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.2.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.12.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\spexco.com.datalayer\spexco.com.datalayer.csproj" />
+    <ProjectReference Include="..\spexco.com.modellayer\spexco.com.modellayer.csproj" />
+  </ItemGroup>
 
 </Project>

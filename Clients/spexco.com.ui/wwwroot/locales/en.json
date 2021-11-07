@@ -1,0 +1,81 @@
+{
+  "app": {
+    "name": "Spexco",
+    "copyright": "All Rights Reserved.",
+    "copyright_company_name": "Spexco Software ",
+    "project_name": "Spexco Businesses"
+  },
+  "login": {
+    "email": "Username",
+    "password": "Password",
+    "captcha": "Enter Characters",
+    "forgot_password": "Forgot Password",
+    "login_successfully": {
+      "title": "Login Successfully!",
+      "description": "You are redirecting to the application, please wait."
+    },
+    "login_error": {
+      "title": "Login Failed!",
+      "description": "Your username or password is incorrect! Please try again.",
+      "back": "Back"
+    }
+  },
+  "button": {
+    "send": "Send",
+    "save": "Save",
+    "add_new": "Add New",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "copy": "Copy",
+    "csv": "CSV",
+    "excel": "Excel",
+    "pdf": "PDF",
+    "print": "Print",
+    "back": "Back",
+    "pls_select": "Please Select",
+    "detail": "Details",
+    "login": "Login",
+    "filter": "Filter",
+    "clear": "Clear"
+  },
+  "datatable": {
+    "copy_title": "Copied to Clipboard",
+    "copy_info": "%d rows copied.",
+    "previous": "Previous",
+    "next": "Next",
+    "first": "First",
+    "last": "Last",
+    "search": "Search ",
+    "empty": "No data available in table",
+    "infoEmpty": "No records available",
+    "total_record": "Total Record",
+    "list_record": "List Record"
+  },
+  "enums": {
+    "none": "None",
+    "thereis": "There Is",
+    "approved": "Approved",
+    "unapproved": "Unapproved",
+    "suspended": "Suspended",
+    "deleted": "Deleted",
+    "male": "Male",
+    "female": "Female",
+    "unknown": "Unknown",
+    "admin": "Admin",
+    "moderator": "Moderator",
+    "user": "User"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "operations": "Operations", 
+  }, 
+  "topnav": {
+    "messageinfo": "You have 42 messages and 6 notifications.",
+    "search": "Search for something...",
+    "logout": "Log out",
+    "welcometext": "Welcome",
+    "language": "Language"
+  }
+}

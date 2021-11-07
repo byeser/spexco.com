@@ -1,0 +1,87 @@
+﻿@model spexco.com.ui.Models.generate_response<int>
+@{
+    var usr = spexco.com.ui.utils.session.helper<spexco.com.ui.Models.Login.LoginResponse>.get(spexco.com.ui.utils.HttpContext.Current, spexco.com.ui.utils.ux.helper.session_user);
+    var list = spexco.com.ui.utils.service.helper<spexco.com.ui.Models.generate_response<spexco.com.ui.Models.Cart.CartProductResponse>>.get_api_client(spexco.com.ui.utils.enums.http_protocol.get, "/api/v1/Cart/Get", null, true, null, null).Result.data;
+}
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="ibox">
+                <div class="ibox-title" style="border-style:none;">
+                    <span class="float-right">(<strong>@(list != null ? list.products.Count() : 0)</strong>)</span>
+                    <h5>
+                        Sepetinizdeki ürünler
+                    </h5>
+                </div>
+                @if (list != null)
+                {
+                    foreach (var item in list.products)
+                    {
+                        <div class="ibox-content">
+                            <div class="table-responsive">
+                                <table class="table shoping-cart-table">
+                                    <tbody>
+                                        <tr>
+                                            <td width="90">                                                
+                                             <img src="@item.images" width="90" height="90" />
+                                            </td>
+                                            <td class="desc">
+                                                <h3>
+                                                    <a href="#" class="text-navy">
+                                                        @item.name
+                                                    </a>
+                                                </h3>
+                                                <p class="small">
+                                                    @item.description
+                                                </p>
+                                            </td>
+                                            <td width="65">
+                                                @item.quantity
+                                            </td>
+                                            <td>
+                                                <h4>
+                                                    @item.price.ToString("N2")
+                                                </h4>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    }
+                }
+            </div>
+
+        </div>
+        <div class="col-md-3">
+
+            <div class="ibox">
+                <div class="ibox-title" style="border-style:none;">
+                    <h5>Sepet Özet</h5>
+                </div>
+                <div class="ibox-content">
+                    <span>
+                        Toplam
+                    </span>
+                    <h2 class="font-bold">
+                        @(list != null ? list.total.ToString("N2") : "0")
+                    </h2>
+
+                    <hr>
+                    <div class="m-t-sm">
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-shopping-cart"></i> Ödeme yap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

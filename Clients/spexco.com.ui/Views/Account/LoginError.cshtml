@@ -1,0 +1,17 @@
+﻿<div id="login_ok" class="sweet-alert showSweetAlert visible" style="display: block;position:inherit !important;width:100% !important;margin-left:0 !important;margin-top:0 !important">
+    <div class="sa-icon sa-error animateErrorIcon" style="display: block;">
+        <span class="sa-x-mark animateXMark">
+            <span class="sa-line sa-left"></span>
+            <span class="sa-line sa-right"></span>
+        </span>
+    </div>
+    <div class="sa-icon sa-custom" style="display: none;"></div><h2 data-i18n="login.login_error.title">Login Failed!</h2>
+    <p style="display: block;" data-i18n="login.login_error.description">Your username or password is incorrect! Please try again...</p>
+    <div class="sa-button-container" style="margin-top: 20px;">
+        <a class="btn btn-success" data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#frm_login" data-i18n="login.login_error.back" href="/Account/Login">Geri</a>
+    </div>
+   
+</div>
+<script>
+    $("#login_ok").i18n();
+</script>

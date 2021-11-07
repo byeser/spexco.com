@@ -1,0 +1,29 @@
+﻿@model spexco.com.ui.Models.Login.LoginRequest
+@{
+    Layout = null;
+}
+    <div>
+        <br /><br /><br /> 
+        <img src="http://www.spexco.com/web/content/images/logo-footer.png" />
+        <br /><br />
+    </div>
+@Html.AntiForgeryToken()
+<div class="form-group">
+    @Html.TextBoxFor(m => m.username, new { @class = "form-control", @data_i18n = "[placeholder]login.email", @required = "" })
+</div>
+<div class="form-group">
+    @Html.TextBoxFor(m => m.password, new { @class = "form-control", @type = "password", @data_i18n = "[placeholder]login.password", @required = "" })
+</div>
+ 
+<button id="login_button" type="submit" class="ladda-button ladda-button-demo btn btn-primary full-width m-b" data-style="zoom-in" data-i18n="button.login">Giriş Yap</button>
+<div class="row">  
+    <p class="m-t"> <small>Copyright &copy; 2021 - Spexco - 1.0.1 </small> </p>
+</div>
+<script>
+    btn = $('#login_button').ladda();
+    $(document).ready(function () {
+        $(document).i18n();
+    });
+    
+</script>
+

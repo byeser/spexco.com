@@ -1,0 +1,8 @@
+D:\Github\spexco.com\Services\spexco.com.modellayer\bin\Debug\netcoreapp3.1\spexco.com.modellayer.deps.json
+D:\Github\spexco.com\Services\spexco.com.modellayer\bin\Debug\netcoreapp3.1\spexco.com.modellayer.dll
+D:\Github\spexco.com\Services\spexco.com.modellayer\bin\Debug\netcoreapp3.1\spexco.com.modellayer.pdb
+D:\Github\spexco.com\Services\spexco.com.modellayer\obj\Debug\netcoreapp3.1\spexco.com.modellayer.csprojAssemblyReference.cache
+D:\Github\spexco.com\Services\spexco.com.modellayer\obj\Debug\netcoreapp3.1\spexco.com.modellayer.AssemblyInfoInputs.cache
+D:\Github\spexco.com\Services\spexco.com.modellayer\obj\Debug\netcoreapp3.1\spexco.com.modellayer.AssemblyInfo.cs
+D:\Github\spexco.com\Services\spexco.com.modellayer\obj\Debug\netcoreapp3.1\spexco.com.modellayer.dll
+D:\Github\spexco.com\Services\spexco.com.modellayer\obj\Debug\netcoreapp3.1\spexco.com.modellayer.pdb

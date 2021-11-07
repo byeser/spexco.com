@@ -1,0 +1,11 @@
+D:\Github\spexco.com\Services\spexco.com.datalayer\bin\Debug\netcoreapp3.1\spexco.com.datalayer.deps.json
+D:\Github\spexco.com\Services\spexco.com.datalayer\bin\Debug\netcoreapp3.1\spexco.com.datalayer.dll
+D:\Github\spexco.com\Services\spexco.com.datalayer\bin\Debug\netcoreapp3.1\spexco.com.datalayer.pdb
+D:\Github\spexco.com\Services\spexco.com.datalayer\bin\Debug\netcoreapp3.1\spexco.com.modellayer.dll
+D:\Github\spexco.com\Services\spexco.com.datalayer\bin\Debug\netcoreapp3.1\spexco.com.modellayer.pdb
+D:\Github\spexco.com\Services\spexco.com.datalayer\obj\Debug\netcoreapp3.1\spexco.com.datalayer.csprojAssemblyReference.cache
+D:\Github\spexco.com\Services\spexco.com.datalayer\obj\Debug\netcoreapp3.1\spexco.com.datalayer.AssemblyInfoInputs.cache
+D:\Github\spexco.com\Services\spexco.com.datalayer\obj\Debug\netcoreapp3.1\spexco.com.datalayer.AssemblyInfo.cs
+D:\Github\spexco.com\Services\spexco.com.datalayer\obj\Debug\netcoreapp3.1\spexco.com.datalayer.csproj.CopyComplete
+D:\Github\spexco.com\Services\spexco.com.datalayer\obj\Debug\netcoreapp3.1\spexco.com.datalayer.dll
+D:\Github\spexco.com\Services\spexco.com.datalayer\obj\Debug\netcoreapp3.1\spexco.com.datalayer.pdb

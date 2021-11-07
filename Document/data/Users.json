@@ -1,0 +1,239 @@
+/* 1 */
+{
+    "_id" : ObjectId("616b46021f09e165b92f8b97"),
+    "address" : {
+        "geolocation" : {
+            "latitude" : "-37.3159",
+            "longitude" : "81.1496"
+        },
+        "city" : "kilcoole",
+        "street" : "new road",
+        "number" : 7682,
+        "zipcode" : "12926-3874"
+    },
+    "email" : "john@gmail.com",
+    "username" : "johnd",
+    "password" : "m38rmF$",
+    "name" : {
+        "firstname" : "john",
+        "lastname" : "doe"
+    },
+    "phone" : "1-570-236-7033",
+    "__v" : 0
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("616b46231f09e165b92f8ba5"),
+    "address" : {
+        "geolocation" : {
+            "latitude" : "-37.3159",
+            "longitude" : "81.1496"
+        },
+        "city" : "kilcoole",
+        "street" : "Lovers Ln",
+        "number" : 7267,
+        "zipcode" : "12926-3874"
+    },
+    "email" : "morrison@gmail.com",
+    "username" : "mor_2314",
+    "password" : "83r5^_",
+    "name" : {
+        "firstname" : "david",
+        "lastname" : "morrison"
+    },
+    "phone" : "1-570-236-7033",
+    "__v" : 0
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("616b46301f09e165b92f8baa"),
+    "address" : {
+        "geolocation" : {
+            "latitude" : "40.3467",
+            "longitude" : "-30.1310"
+        },
+        "city" : "Cullman",
+        "street" : "Frances Ct",
+        "number" : 86,
+        "zipcode" : "29567-1452"
+    },
+    "email" : "kevin@gmail.com",
+    "username" : "kevinryan",
+    "password" : "kev02937@",
+    "name" : {
+        "firstname" : "kevin",
+        "lastname" : "ryan"
+    },
+    "phone" : "1-567-094-1345",
+    "__v" : 0
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("616b463b1f09e165b92f8bad"),
+    "address" : {
+        "geolocation" : {
+            "latitude" : "50.3467",
+            "longitude" : "-20.1310"
+        },
+        "city" : "San Antonio",
+        "street" : "Hunters Creek Dr",
+        "number" : 6454,
+        "zipcode" : "98234-1734"
+    },
+    "email" : "don@gmail.com",
+    "username" : "donero",
+    "password" : "ewedon",
+    "name" : {
+        "firstname" : "don",
+        "lastname" : "romer"
+    },
+    "phone" : "1-765-789-6734",
+    "__v" : 0
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("616b46481f09e165b92f8bb8"),
+    "address" : {
+        "geolocation" : {
+            "latitude" : "40.3467",
+            "longitude" : "-40.1310"
+        },
+        "city" : "san Antonio",
+        "street" : "adams St",
+        "number" : 245,
+        "zipcode" : "80796-1234"
+    },
+    "email" : "derek@gmail.com",
+    "username" : "derek",
+    "password" : "jklg*_56",
+    "name" : {
+        "firstname" : "derek",
+        "lastname" : "powell"
+    },
+    "phone" : "1-956-001-1945",
+    "__v" : 0
+}
+
+/* 6 */
+{
+    "_id" : ObjectId("616b46561f09e165b92f8bbc"),
+    "address" : {
+        "geolocation" : {
+            "latitude" : "20.1677",
+            "longitude" : "-10.6789"
+        },
+        "city" : "el paso",
+        "street" : "prospect st",
+        "number" : 124,
+        "zipcode" : "12346-0456"
+    },
+    "email" : "david_r@gmail.com",
+    "username" : "david_r",
+    "password" : "3478*#54",
+    "name" : {
+        "firstname" : "david",
+        "lastname" : "russell"
+    },
+    "phone" : "1-678-345-9856",
+    "__v" : 0
+}
+
+/* 7 */
+{
+    "_id" : ObjectId("616b46621f09e165b92f8bbf"),
+    "address" : {
+        "geolocation" : {
+            "latitude" : "10.3456",
+            "longitude" : "20.6419"
+        },
+        "city" : "fresno",
+        "street" : "saddle st",
+        "number" : 1342,
+        "zipcode" : "96378-0245"
+    },
+    "email" : "miriam@gmail.com",
+    "username" : "snyder",
+    "password" : "f238&@*$",
+    "name" : {
+        "firstname" : "miriam",
+        "lastname" : "snyder"
+    },
+    "phone" : "1-123-943-0563",
+    "__v" : 0
+}
+
+/* 8 */
+{
+    "_id" : ObjectId("616b466e1f09e165b92f8bc4"),
+    "address" : {
+        "geolocation" : {
+            "latitude" : "50.3456",
+            "longitude" : "10.6419"
+        },
+        "city" : "mesa",
+        "street" : "vally view ln",
+        "number" : 1342,
+        "zipcode" : "96378-0245"
+    },
+    "email" : "william@gmail.com",
+    "username" : "hopkins",
+    "password" : "William56$hj",
+    "name" : {
+        "firstname" : "william",
+        "lastname" : "hopkins"
+    },
+    "phone" : "1-478-001-0890",
+    "__v" : 0
+}
+
+/* 9 */
+{
+    "_id" : ObjectId("616b46781f09e165b92f8bc7"),
+    "address" : {
+        "geolocation" : {
+            "latitude" : "40.12456",
+            "longitude" : "20.5419"
+        },
+        "city" : "miami",
+        "street" : "avondale ave",
+        "number" : 345,
+        "zipcode" : "96378-0245"
+    },
+    "email" : "kate@gmail.com",
+    "username" : "kate_h",
+    "password" : "kfejk@*_",
+    "name" : {
+        "firstname" : "kate",
+        "lastname" : "hale"
+    },
+    "phone" : "1-678-456-1934",
+    "__v" : 0
+}
+
+/* 10 */
+{
+    "_id" : ObjectId("616b46831f09e165b92f8bcc"),
+    "address" : {
+        "geolocation" : {
+            "latitude" : "30.24788",
+            "longitude" : "-20.545419"
+        },
+        "city" : "fort wayne",
+        "street" : "oak lawn ave",
+        "number" : 526,
+        "zipcode" : "10256-4532"
+    },
+    "email" : "jimmie@gmail.com",
+    "username" : "jimmie_k",
+    "password" : "klein*#%*",
+    "name" : {
+        "firstname" : "jimmie",
+        "lastname" : "klein"
+    },
+    "phone" : "1-104-001-4567",
+    "__v" : 0
+}

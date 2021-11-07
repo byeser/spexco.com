@@ -4,14 +4,81 @@
     "D:\\Github\\spexco.com\\Services\\spexco.com.servicehost.api\\spexco.com.servicehost.api.csproj": {}
   },
   "projects": {
-    "D:\\Github\\spexco.com\\Services\\spexco.com.servicehost.api\\spexco.com.servicehost.api.csproj": {
+    "D:\\Github\\spexco.com\\Services\\spexco.com.datalayer\\spexco.com.datalayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\spexco.com\\Services\\spexco.com.servicehost.api\\spexco.com.servicehost.api.csproj",
-        "projectName": "spexco.com.servicehost.api",
-        "projectPath": "D:\\Github\\spexco.com\\Services\\spexco.com.servicehost.api\\spexco.com.servicehost.api.csproj",
+        "projectUniqueName": "D:\\Github\\spexco.com\\Services\\spexco.com.datalayer\\spexco.com.datalayer.csproj",
+        "projectName": "spexco.com.datalayer",
+        "projectPath": "D:\\Github\\spexco.com\\Services\\spexco.com.datalayer\\spexco.com.datalayer.csproj",
         "packagesPath": "C:\\Users\\Eser\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\spexco.com\\Services\\spexco.com.servicehost.api\\obj\\",
+        "outputPath": "D:\\Github\\spexco.com\\Services\\spexco.com.datalayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Eser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Github\\spexco.com\\Services\\spexco.com.modellayer\\spexco.com.modellayer.csproj": {
+                "projectPath": "D:\\Github\\spexco.com\\Services\\spexco.com.modellayer\\spexco.com.modellayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "mongocsharpdriver": {
+              "target": "Package",
+              "version": "[2.13.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.120\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Github\\spexco.com\\Services\\spexco.com.modellayer\\spexco.com.modellayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Github\\spexco.com\\Services\\spexco.com.modellayer\\spexco.com.modellayer.csproj",
+        "projectName": "spexco.com.modellayer",
+        "projectPath": "D:\\Github\\spexco.com\\Services\\spexco.com.modellayer\\spexco.com.modellayer.csproj",
+        "packagesPath": "C:\\Users\\Eser\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\spexco.com\\Services\\spexco.com.modellayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -42,6 +109,118 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.13.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.120\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Github\\spexco.com\\Services\\spexco.com.servicehost.api\\spexco.com.servicehost.api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Github\\spexco.com\\Services\\spexco.com.servicehost.api\\spexco.com.servicehost.api.csproj",
+        "projectName": "spexco.com.servicehost.api",
+        "projectPath": "D:\\Github\\spexco.com\\Services\\spexco.com.servicehost.api\\spexco.com.servicehost.api.csproj",
+        "packagesPath": "C:\\Users\\Eser\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\spexco.com\\Services\\spexco.com.servicehost.api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Eser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Github\\spexco.com\\Services\\spexco.com.datalayer\\spexco.com.datalayer.csproj": {
+                "projectPath": "D:\\Github\\spexco.com\\Services\\spexco.com.datalayer\\spexco.com.datalayer.csproj"
+              },
+              "D:\\Github\\spexco.com\\Services\\spexco.com.modellayer\\spexco.com.modellayer.csproj": {
+                "projectPath": "D:\\Github\\spexco.com\\Services\\spexco.com.modellayer\\spexco.com.modellayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.19, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.12.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.12.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

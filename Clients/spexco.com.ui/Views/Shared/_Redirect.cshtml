@@ -1,0 +1,11 @@
+﻿
+@model string
+
+@if (!string.IsNullOrEmpty(Model))
+{
+    <text>
+        <script>
+            window.location = '@Model';
+        </script>
+    </text>
+}

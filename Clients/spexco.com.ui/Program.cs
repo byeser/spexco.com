@@ -20,6 +20,7 @@ namespace spexco.com.ui
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("http://*:54725");
                     webBuilder.UseStartup<Startup>();
                 });
     }

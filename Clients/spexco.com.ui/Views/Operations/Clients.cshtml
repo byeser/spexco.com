@@ -1,0 +1,70 @@
+﻿@{
+    var usr = spexco.com.ui.utils.session.helper<spexco.com.ui.Models.Login.LoginResponse>.get(spexco.com.ui.utils.HttpContext.Current, spexco.com.ui.utils.ux.helper.session_user);
+
+}
+@using spexco.com.ui.utils
+
+<div class="wrapper wrapper-content  animated fadeInRight" style="padding:0px;">
+    <div class="row">
+        <div class="col-sm-12" style="margin-top:30px;">
+            <div class="tabs-container">
+                <ul class="nav nav-tabs">
+                    <li class="@Html.IsSelected(controller:"Operations",  action: "Clients", id: "Products")">
+                        <a class="" data-ajax="true" data-ajax-begin="url_rw('/Operations/Clients/Products/', i18n.t('nav.products'));loading_start('products');"
+                           data-ajax-complete="loading_stop('products')"
+                           data-ajax-method="Post"
+                           data-ajax-mode="replace"
+                           data-ajax-update="#products"
+                           data-target="#tab-products"
+                           data-toggle="tab"
+                           href="/Products/Index">
+                            <i class="fa fa-file"></i>
+                            <span>Ürünler</span>
+                        </a>
+                    </li>
+                    <li class="@Html.IsSelected(controller:"Operations",  action: "Clients", id: "Carts")">
+                        <a class="" data-ajax="true" data-ajax-begin="url_rw('/Operations/Clients/Carts/', i18n.t('nav.carts'));loading_start('carts');"
+                           data-ajax-complete="loading_stop('carts')"
+                           data-ajax-method="Post"
+                           data-ajax-mode="replace"
+                           data-ajax-update="#carts"
+                           data-target="#tab-carts"
+                           data-toggle="tab"
+                           href="/Carts/_List">
+                            <i class="fa fa-flash"></i>
+                            <span>Sepet</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-products" class="tab-pane @Html.IsSelected(controller:"Operations",  action: "Clients", id: "Products")">
+                        <div id="products" class="panel-body" style="min-height:100px;">
+                            @if (Html.IsSelected(controller: "Operations", action: "Clients", id: "Products", cssClass: "true") == "true")
+                            {
+                                <partial name="~/Views/Products/Index.cshtml" />
+                            }
+                        </div>
+                    </div>
+                    <div id="tab-carts" class="tab-pane @Html.IsSelected(controller:"Operations",  action: "Clients", id: "Carts")">
+                        <div id="carts" class="panel-body" style="min-height:100px;">
+                            @if (Html.IsSelected(controller: "Operations", action: "Clients", id: "Carts", cssClass: "true") == "true")
+                            {
+                                <partial name="~/Views/Carts/_List.cshtml" />
+                            }
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(document).i18n();
+    });
+    $('.full-height-scroll').slimscroll({
+        height: '100%'
+    })
+</script>
+

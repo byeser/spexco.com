@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>spexco.com.servicehost.api</name>
+    </assembly>
+    <members>
+        <member name="T:spexco.com.servicehost.api.Configurations.DependencyInjection">
+            <summary>
+            Startup ta tanımlalar için oluşturuldu ve DI containerler .
+            </summary>
+        </member>
+        <member name="T:spexco.com.servicehost.api.Controllers.AccountController">
+            <summary>
+            Kullanıcı Girişi  ve Yetkilendirme
+            </summary>
+        </member>
+        <member name="M:spexco.com.servicehost.api.Controllers.AccountController.Login(spexco.com.servicehost.api.RequestResponse.User.LoginRequest)">
+             <summary>
+             Kullanıcı girişi - Girişiniz başarılı ise  kullanıcı bilgileri ile beraber token üretir
+             </summary>
+             <param name="request"></param>
+             <remarks>
+             Açıklama
+            
+                 POST /Login
+                 Login Token ile birlikte Kullanıcı bilgilerini getirir.
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="T:spexco.com.servicehost.api.Controllers.AuthController">
+            <summary>
+            Kullanıcı Id si olup olmadını kontrol etmek için oluşturulan Controller
+            </summary>
+        </member>
+        <member name="F:spexco.com.servicehost.api.Controllers.AuthController._httpContextAccessor">
+            <summary>
+            Claims lere erişmek için kullanıldı.
+            </summary>
+        </member>
+        <member name="P:spexco.com.servicehost.api.Controllers.AuthController.UserId">
+            <summary>
+            Kullanıcı Id si
+            </summary>
+        </member>
+        <member name="M:spexco.com.servicehost.api.Controllers.AuthController.SetUserId">
+            <summary>
+            Kullanıcı Id si olup olmadını kontrol eder,Id varsa "UserId" ye set edilir
+            </summary>
+        </member>
+        <member name="T:spexco.com.servicehost.api.Controllers.CartController">
+            <summary>
+            Sepet işlemleri
+            </summary>
+        </member>
+        <member name="M:spexco.com.servicehost.api.Controllers.CartController.AddProduct(spexco.com.servicehost.api.RequestResponse.Cart.AddProductRequest)">
+             <summary>
+             Kullanıcının sepetine ürün ekleme. Eğer ürün sepette ekli ise sepetteki adet sayısını arttırır.
+             </summary> 
+             <param name="request">Eklenecek ürün ve sayısı</param>
+             <remarks>
+             Açıklama
+            
+                 GET/url
+                 Endpointi çağırırken ürün ve sayısını verdiğimiz zaman toplam sepet tutarını response olarak döner.
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="M:spexco.com.servicehost.api.Controllers.CartController.Get">
+             <summary>
+             Kullanıcının sepetteki ürünlerini getirir.
+             </summary> 
+             <remarks>
+             Açıklama
+            
+                 GET/url
+                 Endpointi çağırırken sepetteki ürünler response olarak döner.
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="T:spexco.com.servicehost.api.Controllers.CategoryController">
+            <summary>
+            Kategori işlemleri
+            </summary>
+        </member>
+        <member name="M:spexco.com.servicehost.api.Controllers.CategoryController.GetAll">
+             <summary>
+             Kategori listesini getirir.
+             </summary> 
+             <remarks>
+             Açıklama
+            
+                 GET/url
+                 Endpointi çağırırken kategori listesi response olarak döner.
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="T:spexco.com.servicehost.api.Controllers.ProductsController">
+            <summary>
+            Ürün işlemleri
+            </summary>
+        </member>
+        <member name="M:spexco.com.servicehost.api.Controllers.ProductsController.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="M:spexco.com.servicehost.api.Controllers.ProductsController.Get(System.String)">
+             <summary>
+             Seçili ürünün detayını getirir
+             </summary> 
+             <param name="id">Ürün Id si</param>
+             <remarks>
+             Açıklama
+            
+                 GET/url
+                 Endpointi çağırdığımızda ürüne ait detayı response olarak döner
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="M:spexco.com.servicehost.api.Controllers.ProductsController.GetAll(System.String,System.Int32,System.Int32,System.String)">
+             <summary>
+             Ürünleri sayfalama yaparak listeler.
+             </summary> 
+             <remarks>
+             Açıklama
+            
+                 GET/url
+                 Endpointi çağırdığımızda ürünler sayfalanarak listelenir response olarak döner
+            
+             </remarks> 
+             <param name="category">Ürün kategorisi</param>
+             <param name="size">Kayıt Sayısı</param>
+             <param name="page">Sayfa</param>
+             <param name="order">Sıralama Şekli</param>
+             <returns></returns>
+        </member>
+        <member name="T:spexco.com.servicehost.api.OAuth.AddAuthorizationHeaderParameterOperationFilter">
+            <summary>
+            Swagger de filtelereme için kullanılır
+            </summary>
+        </member>
+        <member name="T:spexco.com.servicehost.api.RequestResponse.ApiResponse`1">
+            <summary>
+            Client için standart bir mesaj dönmesi
+            </summary>
+            <typeparam name="T">istenilen data type set edilebilir</typeparam>
+        </member>
+        <member name="M:spexco.com.servicehost.api.RequestResponse.ApiResponse`1.#ctor">
+            <summary>
+            Constracture ,initiliaze oldugunda listlerin türetilmesi için kullanıldı
+            </summary>
+        </member>
+        <member name="P:spexco.com.servicehost.api.RequestResponse.ApiResponse`1.version">
+            <summary>
+            Versiyonu
+            </summary> 
+        </member>
+        <member name="P:spexco.com.servicehost.api.RequestResponse.ApiResponse`1.code">
+            <summary>
+            Request kodu ,error ,succes etc.
+            </summary> 
+        </member>
+        <member name="P:spexco.com.servicehost.api.RequestResponse.ApiResponse`1.errors">
+            <summary>
+            Hata listesi
+            </summary> 
+        </member>
+        <member name="P:spexco.com.servicehost.api.RequestResponse.ApiResponse`1.success">
+            <summary>
+            Başarılı listesi
+            </summary> 
+        </member>
+        <member name="P:spexco.com.servicehost.api.RequestResponse.ApiResponse`1.data">
+            <summary>
+            Response da dönecek olan verinin tipi ; List,int ,bool,string ...etc
+            </summary> 
+        </member>
+    </members>
+</doc>

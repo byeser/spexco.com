@@ -1,0 +1,12 @@
+﻿@model spexco.com.ui.Models.generate_response<int>
+<partial name="~/Views/Products/_Filters.cshtml" model="new spexco.com.ui.Models.generate_response<spexco.com.ui.Models.Category.CategoryRequest>() { data=new spexco.com.ui.Models.Category.CategoryRequest() ,notify=new spexco.com.ui.utils.partial.notify() {typ= spexco.com.ui.utils.enums.notify.none} }" />
+
+<script>
+    $(document).ready(function () {
+        $(document).i18n();
+    });
+</script>
+@if (Model != null && Model.notify != null && Model.notify.typ != spexco.com.ui.utils.enums.notify.none)
+{
+    @Html.Partial("/views/Shared/_Notify.cshtml", Model.notify)
+}

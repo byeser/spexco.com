@@ -1,0 +1,44 @@
+﻿@model spexco.com.ui.Models.generate_response<spexco.com.ui.Models.Category.CategoryRequest>
+@{
+    var categorylist = spexco.com.ui.utils.service.helper<spexco.com.ui.Models.generate_response<List<string>>>.get_api_client(spexco.com.ui.utils.enums.http_protocol.get, "/api/v1/Category/GetAll", null, true, null, null).Result.data;
+     
+}
+@using spexco.com.ui.utils
+<div class="col-lg-12">
+    <div class="col-sm-6" style="padding-left: 0px;">
+        <div class="form-group">
+            <label >Kategori</label>
+            @Html.ExtendedDropDownListFor(m => m.data.name, categorylist.Select(x => new ExtendedSelectListItem()
+       {
+           Selected = false,
+           Text = x.ToString(),
+           Value = x.ToString()
+       }).OrderBy(x => x.Text).ToList(),
+           new { @class = "dropdown-select-categoryid", @tabindex = "5", @required = "" })
+        </div>
+    </div>
+    <div class="col-sm-1" style="padding-top: 22px;">
+        <button id="btnFilter" class="btn btn-primary" type="button"  tabindex="500">Filter</button>
+    </div>
+</div>
+
+<div class="col-lg-12" id="container">
+    <partial name="~/Views/Products/_List.cshtml" model="new spexco.com.ui.Models.generate_response<int>()" />
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        $(document).i18n();
+        $('.dropdown-select').select2({
+            placeholder: i18n.t('button.pls_select'),
+            width: '100%'
+        });
+        $(".touchspin").TouchSpin({
+            buttondown_class: 'btn btn-white',
+            buttonup_class: 'btn btn-white'
+        });
+
+    });
+
+</script>

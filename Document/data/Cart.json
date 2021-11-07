@@ -1,0 +1,19 @@
+/* 1 */
+{
+    "_id" : ObjectId("616b46021f09e165b92f8b97"),
+    "products" : [ 
+        {
+            "_id" : ObjectId("616c2fdebe95c72b64805ff9"),
+            "quantity" : 1
+        }, 
+        {
+            "_id" : ObjectId("616c2f9dbe95c72b64805fcf"),
+            "quantity" : 2
+        }, 
+        {
+            "_id" : ObjectId("616c2f8abe95c72b64805fc6"),
+            "quantity" : 2
+        }
+    ],
+    "isDeleted" : false
+}

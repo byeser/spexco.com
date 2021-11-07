@@ -1,13 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+
+using Microsoft.AspNetCore.Authentication.Cookies; 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Hosting; 
 
 namespace spexco.com.ui
 {
@@ -22,8 +27,30 @@ namespace spexco.com.ui
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        { 
+            services.AddHttpContextAccessor();
+
             services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddMvc(option => option.EnableEndpointRouting = false);
+            services.AddDistributedMemoryCache();
+            services.AddSession();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+               .AddCookie(options =>
+               {
+                   options.LoginPath = "/Account/SignIn/";
+                   options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+               });
+            services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
+         
+
+            services.Configure<IISOptions>(options => options.AutomaticAuthentication = true);
+            services.AddMemoryCache();
+            services.AddRazorPages().AddMvcOptions(options =>
+            {
+                options.MaxModelValidationErrors = 50;
+                options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(_ => "Bu Alan Zorunludur.");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,22 +62,26 @@ namespace spexco.com.ui
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseExceptionHandler("/Account/Login");
                 app.UseHsts();
             }
+            utils.StaticHttpContextExtensions.UseStaticHttpContext(app);// app.UseStaticHttpContext();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //            Path.Combine(Directory.GetCurrentDirectory(), "Uploads")),
+            //    RequestPath = "/Uploads"
+            //});
+            app.UseCookiePolicy();
+            app.UseSession();
+            app.UseMvc(routes =>
             {
-                endpoints.MapControllerRoute(
+                routes.MapRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Account}/{action=Login}/{id?}");
             });
         }
     }

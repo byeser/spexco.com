@@ -1,0 +1,64 @@
+﻿@{
+   var usr = spexco.com.ui.utils.session.helper<spexco.com.ui.Models.Login.LoginResponse>.get(spexco.com.ui.utils.HttpContext.Current, spexco.com.ui.utils.ux.helper.session_user);
+}
+<div class="row border-bottom white-bg">
+    <nav class="navbar navbar-static-top" role="navigation">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <i class="fa fa-reorder"></i>
+            </button>
+            <a href="#" class="navbar-brand" data-i18n="app.project_name"></a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                 
+            </ul>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a class="set_tr"><img src="~/Images/flags/Turkey.png"> TÜRKÇE</a>
+                        </li>
+                        <li>
+                            <a class="set_en"><img src="~/Images/flags/United-States.png"> ENGLISH</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        @usr.namesurname<i class="fa fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="@Url.Action("LogOut", "Account")" data-i18n="topnav.logout">
+                                <i class="fa fa-sign-out"></i> Log out
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-right">
+                @*<li style=" margin-right:50px;margin-top:15px;">
+                    <span class="label label-primary"></span>
+                </li>*@
+            </ul>
+        </div>
+    </nav>
+</div>
+<script>
+    $(document).ready(function () {
+        //$(document).i18n();
+        $('.set_en').on('click', function () {
+            i18n.setLng('en', function () {
+                $(document).i18n();
+            });
+        });
+
+        $('.set_tr').on('click', function () {
+            i18n.setLng('tr', function () {
+                $(document).i18n();
+            });
+        });
+    });
+</script>

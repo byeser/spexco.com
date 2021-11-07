@@ -1,0 +1,20 @@
+﻿@model string
+<div id="login_ok" class="sweet-alert showSweetAlert visible" style="display: block;position:inherit !important;width:100% !important;margin-left:0 !important;margin-top:0 !important">
+    <div class="sa-icon sa-success animate" style="display: block;">
+        <span class="sa-line sa-tip animateSuccessTip"></span>
+        <span class="sa-line sa-long animateSuccessLong"></span>
+        <div class="sa-placeholder"></div>
+        <div class="sa-fix"></div>
+    </div>
+    <div class="sa-icon sa-custom" style="display: none;"></div><h2 data-i18n="login.login_successfully.title">Login Successfully!</h2>
+    <p style="display: block;" data-i18n="login.login_successfully.description">You are redirecting to the application, please wait...</p>
+</div>
+@if (!string.IsNullOrEmpty(Model))
+{
+    <text>
+        <script>
+            $("#login_ok").i18n();
+            window.location = '@Model';
+        </script>
+    </text>
+}

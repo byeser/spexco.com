@@ -1,0 +1,160 @@
+﻿@model spexco.com.ui.Models.generate_response<int>
+<table class="table table-striped table-bordered table-hover dataTables-products animated fadeInUp" id="tblProducts">
+    <thead>
+        <tr>
+            <th data-field="title">Başlık</th>
+            <th data-field="description">Açıklama</th>
+            <th data-field="category">Kategori</th>
+            <th data-field="image">Resim</th>
+            <th data-field="price">Ücret</th>
+            <th data-field="id">İşlemler</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot>
+        <tr>
+            <th data-field="title">Başlık</th>
+            <th data-field="description">Açıklama</th>
+            <th data-field="category">Kategori</th>
+            <th data-field="image">Resim</th>
+            <th data-field="price">Ücret</th>
+            <th data-field="id">İşlemler</th>
+        </tr>
+    </tfoot>
+</table>
+<br />
+<br />
+<script>
+    var category = 0;
+    var filterByDate = false;
+    $(document).ready(function () {
+        $('#btnFilter').on("click", function (e) {
+            console.log("btn_filter");
+            filterByDate = true;
+            $('#tblProducts').DataTable().destroy();
+            initDataTable();
+            //$('#btn_filter_clear').show();
+        });
+
+        //$('#btn_filter_clear').on("click", function (e) {
+        //    console.log("btn_filter_clear");
+        //    $('#btn_filter_clear').hide();
+        //    filterByDate = false;
+        //    $('#tblProducts').DataTable().destroy();
+        //    initDataTable();
+        //});
+        $('.dropdown-select-categoryid').on('select2:select', function (e) {
+            category = e.params.data.id;
+        });
+        $(document).i18n();
+        initDataTable();
+    });
+    function initDataTable() {
+        $('.dataTables-products').DataTable({
+            destroy: true,
+            pageLength: 5,
+            dom: '<"html5buttons"B>lTfgitp',
+            bLengthChange: false,
+            bInfo: true,
+            info: true,
+            stateSave: false,
+            order: [[0, "desc"]],
+            searching: false,
+            pagingType: "full_numbers",
+            paging: true,
+            ajax: {
+                "url": "/Products/_ListPage",
+                "type": "POST",
+                "datatype": "json",
+                "data": { "category": category, "filterByDate": filterByDate }
+
+            },
+            columns: [
+
+                {
+                    "data": "title", "name": "Title",
+                    fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+                        $(nTd).html(oData.title);
+                    }
+                },
+
+                {
+                    "data": "description", "name": "Description"
+                },
+                {
+                    "data": "category", "name": "Category"
+                },
+                {
+                    "data": "image", "name": "Category",
+                    fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+                        $(nTd).html('<img height="75%" width="75%" src="' + oData.image + '"/>');
+                    }
+                },
+                {
+                    "data": "price", "name": "Price",
+                    fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+                        $(nTd).html('<span class=\"label label-primary\">' + oData.price + '</span>');
+                    }
+                },
+                {
+                    "data": "id", "name": "Id",
+                    fnCreatedCell: function (nTd, sData, oData, iRow, iCol) {
+                        var html_data = " <a data-ajax=\"true\" data-ajax-begin=\"url_rw('/Operations/Clients/Products/', '');loading_start('products');\" data-ajax-complete=\"loading_stop('products')\" data-ajax-method=\"Post\" data-ajax-mode=\"replace\" data-ajax-update=\"#products\" href=\"/Products/_AddCart/" + oData.id + "\" class=\"btn btn-xs btn-outline btn-primary\">Sepete Ekle <i class=\"fa fa-long-arrow-right\"></i> </a>";
+                        $(nTd).html(html_data);
+                    }
+                },
+            ],
+            createdRow: function (row, data, dataIndex) {
+                $(row).attr('data-id', data.id).attr('id', data.id);
+            },
+            //rowCallback: function (row, data, index) {
+            //    if (data.Ornekno != "") {
+            //        $('td:eq(4)', row).css('background-color', '#1ab394').css('color','#FFFFFF');
+            //    }
+            //},
+            columnDefs: [
+                {
+                    "targets": 3,
+                    "className": "text-center",
+
+                },
+                {
+                    "targets": 4,
+                    "className": "text-right",
+
+                },
+            ],
+            serverSide: true,
+            processing: true,
+            buttons: [
+
+            ],
+            language: {
+                buttons: {
+                    copyTitle: i18n.t('datatable.copy_title'),
+                    copySuccess: {
+                        _: i18n.t('datatable.copy_info')
+                    }
+                },
+                paginate: {
+                    previous: i18n.t('datatable.previous'),
+                    next: i18n.t('datatable.next'),
+                    first: i18n.t('datatable.first'),
+                    last: i18n.t('datatable.last'),
+                },
+                search: "_INPUT_",
+                searchPlaceholder: i18n.t('datatable.search'),
+                emptyTable: i18n.t('datatable.empty'),
+                infoEmpty: i18n.t('datatable.infoEmpty'),
+                infoFiltered: "(" + i18n.t('datatable.list_record') + " :_MAX_)",
+                sInfo: i18n.t('datatable.total_record') + " :_TOTAL_"
+            },
+            initComplete: function (settings, json) {
+                $('.dataTables-products').i18n();
+            }
+        }).on('draw', function () {
+            $('.dataTables-products').i18n();
+        });
+
+    }
+</script>

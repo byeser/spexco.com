@@ -1,0 +1,81 @@
+{
+  "app": {
+    "name": "Spexco",
+    "copyright": "Tüm hakları saklıdır.",
+    "copyright_company_name": "Spexco",
+    "project_name": "Spexco"
+  },
+  "login": {
+    "email": "Kullanıcı Adı",
+    "password": "Şifre",
+    "captcha": "Karakterleri Giriniz",
+    "forgot_password": "Şifremi Unuttum",
+    "login_successfully": {
+      "title": "Giriş Başarılı!",
+      "description": "Uygulamaya yönlendiriliyorsunuz, Lütfen bekleyin."
+    },
+    "login_error": {
+      "title": "Giriş Başarısız!",
+      "description": "Kullanıcı adınız veya şifreniz hatalı! Lütfen tekrar deneyin.",
+      "back": "Geri"
+    }
+  },
+  "button": {
+    "send": "Gönder",
+    "save": "Kaydet",
+    "add_new": "Yeni Kayıt",
+    "cancel": "Vazgeç",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "view": "Görüntüle",
+    "copy": "Kopyala",
+    "csv": "CSV",
+    "excel": "Excel",
+    "pdf": "PDF",
+    "print": "Yazıcı",
+    "back": "Geri",
+    "pls_select": "Lütfen Seçin",
+    "detail": "Detay",
+    "login": "Giriş Yap",
+    "filter": "Filtrele",
+    "clear": "Temizle"
+  },
+  "datatable": {
+    "copy_title": "Panoya kopyalandı",
+    "copy_info": "%d satır kopyalandı.",
+    "previous": "Geri",
+    "next": "İleri",
+    "first": "İlk",
+    "last": "Son",
+    "search": "Ara",
+    "empty": "Tabloda veri yok",
+    "infoEmpty": "Kullanılabilir kayıt yok",
+    "total_record": "Toplam Kayıt",
+    "list_record": "Listelenen Kayıt"
+  },
+  "enums": {
+    "none": "Yok",
+    "thereis": "Var",
+    "approved": "Onaylı",
+    "unapproved": "Onaylanmamış",
+    "suspended": "Askıya Alındı",
+    "deleted": "Silindi",
+    "male": "Erkek",
+    "female": "Kadın",
+    "unknown": "Bilinmeyen",
+    "admin": "Admin",
+    "moderator": "Moderator",
+    "user": "User"
+  },
+  "nav": {
+    "dashboard": "Panel",
+    "operations": "İşlemler"
+  }, 
+  "topnav": {
+    "messageinfo": "You have 42 messages and 6 notifications.",
+    "search": "Ara...",
+    "logout": "Çıkış",
+    "welcometext": "Hoşgeldiniz.",
+    "language": "Dil"
+  }
+}

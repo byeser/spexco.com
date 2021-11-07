@@ -1,0 +1,26 @@
+﻿@model spexco.com.ui.utils.partial.notify
+
+@if (Model.typ == spexco.com.ui.utils.enums.notify.error)
+{
+    <text>
+        <script>
+            toastr.error('@Model.description', '@Model.title');
+        </script>
+    </text>
+}
+@if (Model.typ ==  spexco.com.ui.utils.enums.notify.success)
+{
+    <text>
+        <script>
+            toastr.success('@Model.description', '@Model.title');
+        </script>
+    </text>
+}
+@if (Model.typ == spexco.com.ui.utils.enums.notify.warning)
+{
+    <text>
+        <script>
+            toastr.warning('@Model.description', '@Model.title');
+        </script>
+    </text>
+}
