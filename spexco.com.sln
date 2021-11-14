@@ -7,13 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{60CA
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{AC4198D4-F8D6-4814-ABBB-2088CD635EF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spexco.com.ui", "Clients\spexco.com.ui\spexco.com.ui.csproj", "{339B32ED-7467-4837-8B2D-1947A1A5787B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "spexco.com.ui", "Clients\spexco.com.ui\spexco.com.ui.csproj", "{339B32ED-7467-4837-8B2D-1947A1A5787B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spexco.com.servicehost.api", "Services\spexco.com.servicehost.api\spexco.com.servicehost.api.csproj", "{AF929D53-3B27-4604-9EC3-6D2E5B20EA18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "spexco.com.servicehost.api", "Services\spexco.com.servicehost.api\spexco.com.servicehost.api.csproj", "{AF929D53-3B27-4604-9EC3-6D2E5B20EA18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spexco.com.modellayer", "Services\spexco.com.modellayer\spexco.com.modellayer.csproj", "{C46CE5C8-A4F8-4A4D-9B22-FC25A9264659}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "spexco.com.modellayer", "Services\spexco.com.modellayer\spexco.com.modellayer.csproj", "{C46CE5C8-A4F8-4A4D-9B22-FC25A9264659}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spexco.com.datalayer", "Services\spexco.com.datalayer\spexco.com.datalayer.csproj", "{8D8237A6-E5F6-4C49-A6FE-26469225289F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "spexco.com.datalayer", "Services\spexco.com.datalayer\spexco.com.datalayer.csproj", "{8D8237A6-E5F6-4C49-A6FE-26469225289F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spexco.com.restapi", "Services\spexco.com.restapi\spexco.com.restapi.csproj", "{83A7C9C7-25EE-494E-ACF4-27044D0D5B7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{8D8237A6-E5F6-4C49-A6FE-26469225289F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D8237A6-E5F6-4C49-A6FE-26469225289F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D8237A6-E5F6-4C49-A6FE-26469225289F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A7C9C7-25EE-494E-ACF4-27044D0D5B7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A7C9C7-25EE-494E-ACF4-27044D0D5B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A7C9C7-25EE-494E-ACF4-27044D0D5B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A7C9C7-25EE-494E-ACF4-27044D0D5B7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{AF929D53-3B27-4604-9EC3-6D2E5B20EA18} = {AC4198D4-F8D6-4814-ABBB-2088CD635EF4}
 		{C46CE5C8-A4F8-4A4D-9B22-FC25A9264659} = {AC4198D4-F8D6-4814-ABBB-2088CD635EF4}
 		{8D8237A6-E5F6-4C49-A6FE-26469225289F} = {AC4198D4-F8D6-4814-ABBB-2088CD635EF4}
+		{83A7C9C7-25EE-494E-ACF4-27044D0D5B7D} = {AC4198D4-F8D6-4814-ABBB-2088CD635EF4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {64EB13CF-287F-48A8-8E57-7FEF31E6331C}

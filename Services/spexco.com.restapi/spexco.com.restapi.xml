@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>spexco.com.restapi</name>
+    </assembly>
+    <members>
+        <member name="T:spexco.com.restapi.Controllers.StructureController">
+            <summary>
+            Dinamik yapı
+            </summary> 
+        </member>
+        <member name="M:spexco.com.restapi.Controllers.StructureController.DynamicQuery(spexco.com.restapi.Models.apigenericrequest)">
+             <summary>
+             Tablo ismine göre kayıt getirir.
+             </summary> 
+             <param name="request">Sorgu kriterleri</param>
+             <remarks>
+             Açıklama
+            
+                 GET/url
+                 Endpointi çağırırken tablo adı ,kriterler ve sayfalama yaparak response olarak döner.
+            
+             </remarks>
+             <returns></returns>
+        </member>
+        <member name="T:spexco.com.restapi.Models.apigenericrequest">
+            <summary>
+            Generic request 
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.apigenericrequest.tablename">
+            <summary>
+            Tablo adi
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.apigenericrequest.paging">
+            <summary>
+            Sayfalama yapılacaksa true ,yapılmayacaksa false döner
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.apigenericrequest.pageindex">
+            <summary>
+            başlangıç sayfası
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.apigenericrequest.pagesize">
+            <summary>
+            sayfa boyutu
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.apigenericrequest.seletedfileds">
+            <summary>
+            Getirilmesi istenilen alanlar
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.apigenericrequest.orderby">
+            <summary>
+            Sıralamalar
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.apigenericrequest.predicates">
+            <summary>
+            Filtrelenecek kriterlerin grouplanması
+            </summary>
+        </member>
+        <member name="T:spexco.com.restapi.Models.orderby">
+            <summary>
+            Sıralama
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.orderby.fieldname">
+            <summary>
+            Sıralanacak field ismi
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.orderby.type">
+            <summary>
+            Sıralama Türü ASC, DESC
+            </summary>
+        </member>
+        <member name="T:spexco.com.restapi.Models.predicate">
+            <summary>
+            sorgular
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.predicate.logicaloperators">
+            <summary>
+            AND yada OR operatörü
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.predicate.filters">
+            <summary>
+            filtreleme kriteri
+            </summary>
+        </member>
+        <member name="T:spexco.com.restapi.Models.filters">
+            <summary>
+            Filtreleme alanları
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.filters.fieldname">
+            <summary>
+            Filtrelenecek alan
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.filters.operators">
+            <summary>
+            Filtreleme durumu
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.filters.value1">
+            <summary>
+            Filtrelenecek deger 1
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.filters.value2">
+            <summary>
+            Filtrelenecek deger 2
+            </summary>
+        </member>
+        <member name="T:spexco.com.restapi.Models.apiresponse`1">
+            <summary>
+            Client için standart bir mesaj dönmesi
+            </summary>
+            <typeparam name="T">istenilen data type set edilebilir</typeparam>
+        </member>
+        <member name="M:spexco.com.restapi.Models.apiresponse`1.#ctor">
+            <summary>
+            Constracture ,initiliaze oldugunda listlerin türetilmesi için kullanıldı
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.apiresponse`1.version">
+            <summary>
+            Versiyonu
+            </summary> 
+        </member>
+        <member name="P:spexco.com.restapi.Models.apiresponse`1.code">
+            <summary>
+            Request kodu ,error ,succes etc.
+            </summary> 
+        </member>
+        <member name="P:spexco.com.restapi.Models.apiresponse`1.errors">
+            <summary>
+            Hata listesi
+            </summary> 
+        </member>
+        <member name="P:spexco.com.restapi.Models.apiresponse`1.success">
+            <summary>
+            Başarılı listesi
+            </summary> 
+        </member>
+        <member name="P:spexco.com.restapi.Models.apiresponse`1.totalcount">
+            <summary>
+            Toplam Kayıt Sayısı
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.apiresponse`1.displayedrecord">
+            <summary>
+            Görüntülenen Kayıt Sayısı
+            </summary>
+        </member>
+        <member name="P:spexco.com.restapi.Models.apiresponse`1.data">
+            <summary>
+            Response da dönecek olan verinin tipi ; List,int ,bool,string ...etc
+            </summary> 
+        </member>
+        <member name="T:spexco.com.restapi.OAuth.AddAuthorizationHeaderParameterOperationFilter">
+            <summary>
+            Swagger de filtelereme için kullanılır
+            </summary>
+        </member>
+        <member name="T:spexco.com.restapi.utils.connection.helper">
+            <summary>
+            veritabanı bağlantısı
+            </summary>
+        </member>
+        <member name="M:spexco.com.restapi.utils.connection.helper.get_connection">
+            <summary>
+            veritabanı bağlantısı geri dönderir.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:spexco.com.restapi.utils.ux.helper">
+            <summary>
+            Helper
+            </summary>
+        </member>
+        <member name="M:spexco.com.restapi.utils.ux.helper.get_appsettings``1(System.String)">
+            <summary>
+            Appsettings deki dataları getirir 
+            </summary>
+            <param name="key">Getirilerek datanın key i</param>
+            <returns></returns>
+        </member>
+        <member name="M:spexco.com.restapi.utils.ux.helper.get_query(spexco.com.restapi.Models.apigenericrequest)">
+            <summary>
+            Dinamik sorgu
+            </summary>
+            <param name="request">sorgu parametreleri</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:spexco.com.restapi.utils.ux.helper.query_paging(System.Boolean,System.Int32,System.Int32,spexco.com.restapi.Models.orderby)" -->
+        <member name="M:spexco.com.restapi.utils.ux.helper.query_where(spexco.com.restapi.Models.predicate)">
+            <summary>
+            sorgu kriterleri,şartlar
+            </summary>
+            <param name="predicate">şartlar</param>
+            <returns></returns>
+        </member>
+        <member name="M:spexco.com.restapi.utils.ux.helper.query_selectfield(System.Collections.Generic.List{System.String})">
+            <summary>
+            Sorguda getirilecek field lar 
+            </summary>
+            <param name="selected">field</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
